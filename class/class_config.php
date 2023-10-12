@@ -43,7 +43,7 @@ class config  {
 		} else {
 			$protocol = 'http://';
 		}
-		return self::protocol().$_SERVER['HTTP_HOST']."/Manport/".$uri;
+		return self::protocol().$_SERVER['HTTP_HOST']."/langfo/".$uri;
 	}
 
 	public static function generate_uuid() {

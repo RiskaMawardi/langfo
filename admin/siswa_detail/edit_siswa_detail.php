@@ -2,7 +2,7 @@
 
 	$db = new siswa;
 	if($db->cekLoginNo_halamanAdmin() === true) die;
-
+	$i = new config;
 	$dbJ = new jurusan;
 	$dbK = new kelas;
 	$dbSem = new semester;
@@ -16,7 +16,7 @@
 		<form id="form" method="post" action="siswa_detail/proses.php?action=edit_siswa_detail">
 		<?= $db->pesan_edit_siswa_detail(); ?>
 		<?php if($r) : ?>
-			<input type="hidden" name="tokenCSRF" value="<?= config::generate_tokenCSRF(); ?>">			
+			<input type="hidden" name="tokenCSRF" value="<?= $i->generate_tokenCSRF(); ?>">			
 			<input type="hidden" name="siswa_detail_id" value="<?= $siswa_detail_id; ?>">
 			<label class="label">Status</label>
 			<?= $errors['status']??'';	?>

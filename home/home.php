@@ -13,7 +13,7 @@
 		<?php endif; ?>
 
 		<h1 class="marginBottom40px"><?= $identitas_sekolah['nama_sekolah']??'...'; ?></h1>
-		<img class="marginBottom20px" src="<?= config::base_url('assets/img/icon/manport.png'); ?>">
+		<img class="marginBottom20px" src="<?= config::base_url('assets/img/logo/smknasional.png'); ?>">
 		<p class="alamat"><?= $identitas_sekolah['alamat']??'...'; ?></p>
 	</div>
 	<div class="homeFront homeFrontSilver cf">

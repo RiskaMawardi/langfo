@@ -15,6 +15,7 @@ class login extends config {
 			'username[Username]' => 'required',
 			'password[Password]' => 'required',
 		], true);
+
 		$this->set_delimiter('<p class="pesan warning">','</p>');
 		// cek form error
 		if($this->has_formErrors()) {
@@ -77,6 +78,7 @@ class login extends config {
 
 		$data_tahun_ajaran = $dbTA->get_tahun_ajaran_status_run();
 		$data_semester = $dbSem->get_semester_status_yes();
+		
 
 		if($data_tahun_ajaran == true && $data_semester == true) {
 			$get = $this->db->prepare("SELECT wk.*, k.jurusan_id, k.kelas, j.nama_jurusan

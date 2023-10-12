@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Management Raport</title>
+	<title>SMK Nasional Malang</title>
 	<?php include '../header.php'; ?>
 </head>
 <body class="bgSilver">
@@ -28,45 +28,7 @@
 			</li>
 
 			<ul class="dropdown_mobile">
-				<li><a href="dropdownAuto">JURUSAN</a>
-					<!-- menu dropdown jurusan -->
-					<ul class="drop_menu menu_jurusan" target-menu="auto">
-						<div class="container">
-						<?php  
-							if($dataJurusanIndex) :
-							$jmlJurusanIndex = ceil(count($dataJurusanIndex)/2);
-							if($jmlJurusanIndex > 1) :
-						?>
-						<div class="col-6">
-						<?php else: ?>
-						<div class="col-12">
-						<?php
-							endif;
-							$no= 1;
-							foreach($dataJurusanIndex as $j) :
-						?>
-							<li id="<?= $j['jurusan_id']; ?>"><a href="dropdownAuto"><?= $j['nama_jurusan']; ?></a>
-								<ul target-menu="auto" class="kelas <?= $j['jurusan_id']; ?>menuheader">
-								<?php 
-									$dataKelasIndex = new kelas();
-									$dataKelasIndex = $dataKelasIndex->tampil_kelas($j['jurusan_id']);
-									if($dataKelasIndex) :
-									foreach($dataKelasIndex as $k) :
-								?>
-									<li><a href="<?= config::base_url('guru').'/index.php?jurusan_id='.$j['jurusan_id'].'&kelas_id='.$k['kelas_id'] ?>"><?= $k['kelas']; ?></a></li>
-
-								<?php endforeach; endif; ?>
-								</ul>
-							</li>
-						<?php if($jmlJurusanIndex > 1 && $no == $jmlJurusanIndex) : ?>
-						</div><div class="col-6">
-						<?php endif; $no++;endforeach;endif; ?>
-						</div>
-					</ul>
-					<!-- menu dropdown jurusan end -->
-				</li>
-				<li><a href="index.php?ref=juara_umum">JUARA UMUM</a></li>
-
+				
 				<li class="right sign-out"><a title="Log Out" href="<?= config::base_url('admin/login/logout.php'); ?>"><span class="fa fa-sign-out ico"></span></a></li>
 				<li class="right"><a target="_blank" title="Pusat Bantuan" href="<?= config::base_url('index.php?ref=pusat_bantuan'); ?>"><span class="fa fa-question-circle-o ico"></span></a></li>
 				<li class="right"><a title="Buat Cadangan Database" target="_blank" href="<?= config::base_url('admin/backup_data/backup_data.php'); ?>"><span class="fa fa-cloud-download ico"></span></a></li>
@@ -139,5 +101,11 @@ $(function(){
 })
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/v/dt/dt-1.13.6/datatables.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script>
+	new DataTable('#example');
+</script>
 </body>
 </html>

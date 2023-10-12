@@ -2,7 +2,7 @@
 
 	$dbJ = new jurusan;
 	if($dbJ->cekLoginNo_halamanAdmin() === true) die;
-	
+	$i = new config;
 	$dbSem = new semester;
 	$dbK = new kelas;
 	$jurusan_id = filter_var($_COOKIE['jurusan_id']??'', FILTER_SANITIZE_STRING);
@@ -15,7 +15,7 @@
 	<div class="home default cf">
 		<h1 class="judul marginBottom20px">Tambah Siswa</h1>
 		<form id="form">
-			<input type="hidden" id="tokenCSRF" value="<?= config::generate_tokenCSRF(); ?>">
+			<input type="hidden" id="tokenCSRF" value="<?= $i->generate_tokenCSRF(); ?>">
 			<p id="pesan_jurusan"></p>
 			<label class="label">Jurusan</label>
 			<select name="jurusan" id="jurusan" url_tampil_kelas="siswa_detail/proses.php?action=tampil_kelas">

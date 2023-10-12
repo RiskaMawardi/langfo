@@ -11,7 +11,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Management Raport</title>
+	<title>SMK Nasional Malang</title>
 	<?php include '../header.php'; ?>
 </head>
 <body class="bgSilver">

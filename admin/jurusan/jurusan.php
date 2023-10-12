@@ -1,6 +1,7 @@
 <?php  if(!class_exists("config")) { die; }
 
 	$db = new jurusan;
+	$i = new config;
 	if($db->cekLoginNo_halamanAdmin() === true) die;
 ?>
 <div class="col-10 offset-right-1 offset-left-1">
@@ -8,32 +9,32 @@
 		<h1 class="judul marginBottom30px">Jurusan</h1>
 		<a href="<?= config::base_url('admin/index.php?ref=add_jurusan'); ?>" class="button green "><span class="fa fa-database"></span></a>
 		
-		<table class="table marginTop20px">
-			<tr class="silver">
-				<th align="center" colspan="2">Aksi</th>
-				<th>Nama Jurusan</th>				
+		<table id="example" class="table table-striped" style="width:100%">
+			<thead>
+			<tr>
+				<th colspan="2">Aksi</th>
+				<th>Nama Jurusan</th>	
+						
 			</tr>
+			</thead>
+			<tbody>
 			<?php 
 				$data = $db->tampil_jurusan(); 
-				if($data) :
 				foreach($data as $r) :
 			?>
 			<tr>
-				<td width="10"><a class="del" jurusan_id="<?= $r['jurusan_id']; ?>"><span class="fa fa-trash-o fa-lg"></span></a></td>
-				<td width="10"><a href="<?= config::base_url('admin/index.php?ref=edit_jurusan&jurusan_id='.$r['jurusan_id']); ?>"><span class="fa fa-edit fa-lg"></span></a></td>				
+				<td><a class="btn btn-danger" jurusan_id="<?= $r['jurusan_id']; ?>"><span class="fa fa-trash-o fa-lg"></span></a></td>
+				<td><a href="<?= config::base_url('admin/index.php?ref=edit_jurusan&jurusan_id='.$r['jurusan_id']); ?>" class="btn btn-warning"><span class="fa fa-edit fa-lg"></span></a></td>				
 
 				<td><?= $r['nama_jurusan']; ?></td>
 			</tr>
-			<?php endforeach; else : ?>
-			<tr>
-				<td></td><td></td><td></td>
-			</tr>
-			<?php endif; ?>
+			<?php endforeach; ?>
+			</tbody>
 		</table>
 	</div>
 </div>
 <statusAjax value="yes">
-<input type="hidden" id="tokenCSRF" value="<?= config::generate_tokenCSRF(); ?>">
+<input type="hidden" id="tokenCSRF" value="<?= $i->generate_tokenCSRF(); ?>">
 <script type="text/javascript">
 $(function(){
 	// delete jurusan
