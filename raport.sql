@@ -32,7 +32,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`admin_id`,`username`,`password`,`level`) VALUES
-('f2f2abbb-bc96-45ea-a6f0-331d3364ebb9', 'reza', '$argon2i$v=19$m=1024,t=2,p=2$bXJQMnBGa1E2NU1oaTFPLg$bfsn//wC5XlK25WwmyVe5iOE6WQ2der0LFQJ04jBiIY', 'admin');
+('f2f2abbb-bc96-45ea-a6f0-331d3364ebb9', 'riska', '$argon2i$v=19$m=1024,t=2,p=2$bXJQMnBGa1E2NU1oaTFPLg$bfsn//wC5XlK25WwmyVe5iOE6WQ2der0LFQJ04jBiIY', 'admin');
 
 -- --------------------------------------------------------
 
