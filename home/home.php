@@ -50,7 +50,7 @@
 				<option value="<?= $s['semester_id'].'.'.$s['semester']; ?>"><?= $s['semester']; ?></option>
 				<?php endforeach; endif; ?>
 			</select>
-			<button id="tampil_raport_siswa" class="button green marginTop20px"><span class="fa fa-send"></span> Lihat</button>
+			<button id="tampil_raport_siswa" class="button blue marginTop20px"><span class="fa fa-send"></span> Lihat</button>
 		</form>
 	</div>
 	<div class="homeFront homeFrontWhite no_border_radius no_border_top raport_siswa display_none overflowXAuto">
@@ -175,7 +175,7 @@
 			<p class="marginTop10px">Berdasarkan hasil yang dicapai pada semester 1 dan 2, peserta didik ditetapkan :</p>
 		</div>
 	</div>
-	<p class="copyRight marginTop20px">Copyright &copy; <?= date('Y'); ?> Reza Sariful Fikri. All Rights Reserved</p>
+	<p class="copyRight marginTop20px">Copyright &copy; <?= date('Y'); ?> SMK Nasional Malang. All Rights Reserved</p>
 </div>
 
 <?php if(!$dbLog->cekLoginYes_forHalamanLoginAdmin()) : ?>
@@ -184,7 +184,7 @@
 		<div class="loginTop">
 			<a class="btn_hide_login"><span class="fa fa-arrow-left"></span></a>
 
-			<h2>MANPORT</h2>
+			<h2>LANGPORT</h2>
 			<p class="command marginTop20px">Silahkan login untuk melakukan pengisian raport siswa!</p>
 			<p class="note marginBottom40px">Masukkan <span class="green">Nama</span>, lengkap dengan <span class="green">gelar!</span></p>
 
@@ -194,9 +194,9 @@
 			<p id="pesan_password"></p>
 			<input type="password" id="password" placeholder="Password ...">
 
-			<button class="button green marginTop20px" id="login"><span class="fa fa-sign-in"></span> Masuk</button>
+			<button class="button blue marginTop20px" id="login"><span class="fa fa-sign-in"></span> Masuk</button>
 		</div>
-		<p class="copyRight marginTop20px">Copyright &copy; <?= date('Y'); ?> Reza Sariful Fikri. All Rights Reserved</p>
+		<p class="copyRight marginTop20px">Copyright &copy; <?= date('Y'); ?> SMK Nasional Malang. All Rights Reserved</p>
 	</form>
 </div>
 <?php endif; ?>

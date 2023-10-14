@@ -23,7 +23,7 @@
 				</a></li>
 			<?php endif; ?>
 			<li><a href="<?php if($_SESSION['RAPORT']['level'] == "admin") { echo config::base_url('admin/index.php'); } elseif($_SESSION['RAPORT']['level'] == "guru") {echo config::base_url('guru/index.php');} ?>"
-					class="benner"><span class="fa fa-home ico"></span> MANPORT</a></li>
+					class="benner"><span class="fa fa-home ico"></span> LANGPORT</a></li>
 			<?php if($_SESSION['RAPORT']['level'] == "admin") : ?>
 			<li class="right sign-out"><a href="<?= config::base_url('admin/login/logout.php'); ?>"><span
 						class="fa fa-sign-out ico"></span></a></li>

@@ -22,8 +22,8 @@
 	<div class="loginAdmin">
 		<form action="proses.php" id="form" method="post">
 			<div class="login_top">
-				<h1 class="marginBottom20px">MANPORT Admin</h1>
-				<p class="command marginBottom40px">Silahkan masukkan <span class="green">username</span> dan <span class="green">password</span> kamu!</p>
+				<h1 class="marginBottom20px">LANGPORT Admin</h1>
+				<p class="command marginBottom40px">Silahkan masukkan <span class="blue">username</span> dan <span class="blue">password</span> kamu!</p>
 				<input type="hidden" name="tokenCSRF" value="<?= $dbL->generate_tokenCSRF(); ?>">
 				<?= $dbL->pesan_login(); ?>
 				<?= $errors['username']??''; ?>
@@ -31,9 +31,9 @@
 				<?= $errors['password']??''; ?>
 				<input type="password" name="password" placeholder="Password ..." value="<?= $old['password']??''; ?>">
 
-				<button class="button green marginTop20px" type="submit"><span class="fa fa-sign-in"></span> Masuk</button>
+				<button class="button blue marginTop20px" type="submit"><span class="fa fa-sign-in"></span> Masuk</button>
 			</div><!-- login_top -->
-			<p class="copyRight marginTop20px">Copyright &copy; <?= date('Y'); ?> Reza Sariful Fikri. All Rights Reserved</p>
+			<p class="copyRight marginTop20px">Copyright &copy; <?= date('Y'); ?> SMK Nasional Malang. All Rights Reserved</p>
 		</form>
 	</div>
 

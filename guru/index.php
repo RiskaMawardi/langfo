@@ -22,7 +22,7 @@
 		<div class="container">
 			<li><a id="btn_drop_menu_siswa"><div class="menu_humberger"></div></a></li>
 
-			<li><a href="index.php" class="benner"><span class="fa fa-home ico"></span> MANPORT</a></li>
+			<li><a href="index.php" class="benner"><span class="fa fa-home ico"></span> LANGPORT</a></li>
 
 			<li class="right sign-out"><a href="<?= config::base_url('home/proses.php?action=logout'); ?>"><span class="fa fa-sign-out ico"></span></a></li>
 			<li class="right"><a target="_blank" title="Pusat Bantuan" href="<?= config::base_url('index.php?ref=pusat_bantuan'); ?>"><span class="fa fa-question-circle-o ico"></span></a></li>

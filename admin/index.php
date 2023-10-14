@@ -19,7 +19,7 @@
 			<?php  
 				$dataJurusanIndex = $dataJurusanIndex->tampil_jurusan();
 			?>
-			<li><a href="index.php" class="benner"><span class="fa fa-home ico"></span> MANPORT</a></li>
+			<li><a href="index.php" class="benner"><span class="fa fa-home ico"></span> LANGPORT</a></li>
 
 			<li class="right button_drop_mobile">
 				<a href="dropdownManual" target-menu="dropdown_mobile">
