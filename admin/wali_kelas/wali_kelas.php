@@ -11,30 +11,33 @@
 		<a href="<?= config::base_url('admin/index.php?ref=add_wali_kelas'); ?>" class="button green"><span class="fa fa-database"></span></a>
 		<span class="badge" id="jmlSiswa"><?= count($wali_kelas??[]); ?> Wali kelas</span>
 		
-		<table class="table marginTop20px">
-			<tr class="silver">
-				<th align="center" colspan="2">Aksi</th>
+		<table id="example" class="table table-striped" style="width:100%">
+		<thead>
+		<tr>
+				<th colspan="2">Aksi</th>
 				<th>Wali kelas</th>
 				<th>Kelas</th>
 				<th>Jurusan</th>				
 			</tr>
-			<?php  
-				if($wali_kelas) :
+		</thead>
+		<tbody>
+		<?php  
+				
 				foreach($wali_kelas as $r) :
 			?>
 			<tr class="jmlTr">
-				<td width="10"><a id="delete" wali_kelas_id="<?= $r['wali_kelas_id']; ?>"><span class="fa fa-trash-o fa-lg"></span></a></td>
-				<td width="10"><a href="<?= config::base_url('admin/index.php?ref=edit_wali_kelas&wali_kelas_id='.$r['wali_kelas_id']); ?>"><span class="fa fa-edit fa-lg"></span></a></td>
+				<td><a id="delete" wali_kelas_id="<?= $r['wali_kelas_id']; ?>"><span class="fa fa-trash-o fa-lg"></span></a></td>
+				<td><a href="<?= config::base_url('admin/index.php?ref=edit_wali_kelas&wali_kelas_id='.$r['wali_kelas_id']); ?>"><span class="fa fa-edit fa-lg"></span></a></td>
 
 				<td><?= $r['nama']; ?></td>
 				<th><?= $r['kelas']; ?></th>
 				<td><?= $r['nama_jurusan']; ?></td>
 			</tr>
-			<?php endforeach; else : ?>
-			<tr>
-				<td colspan="5" class="color_data_kosong">Data kosong</td>
-			</tr>
-			<?php endif; ?>
+			<?php endforeach; ?>
+		
+			
+		</tbody>
+			
 		</table>
 	</div>
 </div>

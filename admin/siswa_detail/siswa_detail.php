@@ -52,22 +52,25 @@
 		</div>
 
 		<div class="col-12 nopadding-all">
-			<table class="table marginTop15px">
-				<tr class="silver">
-					<th width="10" colspan="3" align="center">Aksi</th>
+			<table id="example" class="table table-striped" style="width:100%">
+			<thead>
+				<tr>
+					<th colspan="3">Aksi</th>
 					<th>Nama siswa</th>
 					<th>NISN</th>
 				</tr>
-				<tbody id="tampil_siswa">
+			</thead>
+				
+			<tbody id="tampil_siswa">
 				<tr>
-					<td width="10"></td>
-					<td width="10"></td>
-					<td width="10"></td>
+					<td></td>
+					<td></td>
+					<td></td>
 
 					<td></td>
 					<td></td>
 				</tr>
-				</tbody>
+			</tbody>
 			</table>
 		</div>
 	</div>

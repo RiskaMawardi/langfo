@@ -21,17 +21,16 @@
 			?>
 			<li><a href="index.php" class="benner"><span class="fa fa-home ico"></span> LANGPORT</a></li>
 
-			<li class="right button_drop_mobile">
+			<!-- <li class="right button_drop_mobile">
 				<a href="dropdownManual" target-menu="dropdown_mobile">
 					<div class="menu_humberger"></div>
 				</a>
-			</li>
+			</li> -->
 
 			<ul class="dropdown_mobile">
 				
 				<li class="right sign-out"><a title="Log Out" href="<?= config::base_url('admin/login/logout.php'); ?>"><span class="fa fa-sign-out ico"></span></a></li>
-				<li class="right"><a target="_blank" title="Pusat Bantuan" href="<?= config::base_url('index.php?ref=pusat_bantuan'); ?>"><span class="fa fa-question-circle-o ico"></span></a></li>
-				<li class="right"><a title="Buat Cadangan Database" target="_blank" href="<?= config::base_url('admin/backup_data/backup_data.php'); ?>"><span class="fa fa-cloud-download ico"></span></a></li>
+				
 				<li class="right"><a title="Pengaturan" href="dropdownAuto"><span class="fa fa-gear ico"></span></a>
 					<!-- menu dropdown setting -->
 					<ul class="drop_menu setting" target-menu="auto">
@@ -42,15 +41,16 @@
 							<li><a href="index.php?ref=kelas">Kelas</a></li>
 							<li><a href="index.php?ref=tahun_ajaran">Tahun ajaran</a></li>
 						  	<li><a href="index.php?ref=semester">Semester</a></li>
-							<li><a href="index.php?ref=siswa_detail">Data siswa detail</a></li>
-							<li><a href="index.php?ref=kkm">KKM</a></li>
+							
 						</div>
 					  	<div class="col-6">
 							<li><a href="index.php?ref=mapel">Mata pelajaran</a></li>
 							<li><a href="index.php?ref=wali_kelas">Wali kelas</a></li>
-							<li><a href="index.php?ref=siswa_lulus">Data siswa lulus</a></li>
+							<li><a href="index.php?ref=siswa_detail">Data siswa detail</a></li>
+							<li><a href="index.php?ref=kkm">KKM</a></li>
+							<!-- <li><a href="index.php?ref=siswa_lulus">Data siswa lulus</a></li>
 							<li><a href="index.php?ref=siswa_keluar">Data siswa keluar</a></li>
-							<li><a href="index.php?ref=izin_kenaikan_kelas">Izin kenaikan kelas</a></li>
+							<li><a href="index.php?ref=izin_kenaikan_kelas">Izin kenaikan kelas</a></li> -->
 							<li><a href="index.php?ref=user_admin">Admin</a></li>
 					  	</div>
 						</div>
